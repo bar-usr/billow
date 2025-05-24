@@ -3,19 +3,32 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Backgrounds & text */
+  --background: #ffffff;   /* gray-50 */
+  --foreground: #111827;   /* gray-900 */
+  
+  /* Brand colors */
+  --primary: #3b82f6;       /* blue-500 */
+  --accent: #f59e0b;        /* amber-500 */
+  
+  /* UI neutrals */
+  --muted: #6b7280;         /* gray-500 */
+  --border: #e5e7eb;        /* gray-200 */
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+.dark {
+  --background: #111827;   /* gray-900 */
+  --foreground: #f3f4f6;   /* gray-100 */
+  --primary: #60a5fa;       /* blue-400 */
+  --accent: #fbbf24;        /* amber-400 */
+  --muted: #9ca3af;         /* gray-400 */
+  --border: #374151;        /* gray-700 */
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  @apply bg-background text-foreground font-sans;
 }
