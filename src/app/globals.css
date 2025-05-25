@@ -9,6 +9,8 @@
   
   /* Brand colors */
   --primary: #3b82f6;       /* blue-500 */
+  --primary-200: #93c5fd; /* blue-200 */
+  --primary-400: #60a5fa; /* blue-400 */
   --accent: #f59e0b;        /* amber-500 */
   
   /* UI neutrals */
