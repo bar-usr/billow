@@ -30,7 +30,20 @@ export default {
         btnX: "30px",
         btnY: "15px",
       },
- 
+      scale: {
+        '80': '0.8',
+        '95': '0.95',
+        '97': '0.97',
+      },
+      keyframes: {
+        grow: {
+          '0%': { transform: 'scale(0.95)' },
+          '100%': { transform: 'scale(1)' },
+        }
+      },
+      animation: {
+        'grow': 'grow 0.5s ease-in-out forwards',
+      },
       textShadow: {
         'sm': '0 1px 2px var(--tw-shadow-color)',
         'DEFAULT': '0 2px 4px var(--tw-shadow-color)',
@@ -40,6 +53,7 @@ export default {
         '2xl': '0 24px 48px var(--tw-shadow-color)',
         'none': 'none',
       },
+      darkMode: 'class', // required for manual class toggling
     },
   },
   plugins: [

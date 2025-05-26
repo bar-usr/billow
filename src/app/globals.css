@@ -4,27 +4,112 @@
 
 :root {
   /* Backgrounds & text */
-  --background: #ffffff;   /* gray-50 */
+  --background: #ffffff;   /* white */
+  --background-secondary: oklch(70.7% 0.022 261.325);
+  --background-rgb: 255, 255, 255;  /* RGB values for white */
   --foreground: #111827;   /* gray-900 */
   
   /* Brand colors */
-  --primary: #3b82f6;       /* blue-500 */
-  --primary-200: #93c5fd; /* blue-200 */
-  --primary-400: #60a5fa; /* blue-400 */
-  --accent: #f59e0b;        /* amber-500 */
+  --primary: #065f46;      /* emerald-900 */
+  --primary-hover: #064e3b; /* emerald-950 */
+  --primary-light: #d1fae5; /* emerald-100 */
+  --primary-light-rgb: 209, 250, 229; /* RGB values for emerald-100 */
+  --primary-middle: #34d399; /* emerald-400 */
+  --primary-middle-rgb: 52, 211, 153; /* RGB values for emerald-400 */
+  --primary-dark: #047857;  /* emerald-800 */
+  --primary-lightest: #10b981; /* emerald-500 */
+  
+  /* Text colors */
+  --text-primary: #111827;   /* gray-900 */
+  --text-secondary: #4b5563; /* gray-600 */
+  --text-muted: #6b7280;     /* gray-500 */
   
   /* UI neutrals */
-  --muted: #6b7280;         /* gray-500 */
   --border: #e5e7eb;        /* gray-200 */
+  --border-dark: #d1d5db;   /* gray-300 */
+  --background-light: #f3f4f6; /* gray-100 */
+  --background-muted: #f9fafb; /* gray-50 */
+  
+  /* Shadows */
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
 }
 
 .dark {
-  --background: #111827;   /* gray-900 */
-  --foreground: #f3f4f6;   /* gray-100 */
-  --primary: #60a5fa;       /* blue-400 */
-  --accent: #fbbf24;        /* amber-400 */
-  --muted: #9ca3af;         /* gray-400 */
+  /* Backgrounds & text */
+  --background: oklch(14.1% 0.005 285.823);   /* gray-900 */
+  --background-rgb: 17, 24, 39;  /* RGB values for gray-900 */
+  --foreground: #f9fafb;   /* gray-50 */
+  
+  --primary: #065f46;      /* emerald-900 */
+  --primary-hover: #064e3b; /* emerald-950 */
+  --primary-light: #d1fae5; /* emerald-100 */
+  --primary-light-rgb: 209, 250, 229; /* RGB values for emerald-100 */
+  --primary-middle: #34d399; /* emerald-400 */
+  --primary-middle-rgb: 52, 211, 153; /* RGB values for emerald-400 */
+  --primary-dark: #047857;  /* emerald-800 */
+  --primary-lightest: #10b981; /* emerald-500 */
+  
+  /* Text colors */
+  --text-primary: #f9fafb;   /* gray-50 */
+  --text-secondary: #e5e7eb; /* gray-200 */
+  --text-muted: #9ca3af;     /* gray-400 */
+  
+  /* UI neutrals */
   --border: #374151;        /* gray-700 */
+  --border-dark: #4b5563;   /* gray-600 */
+  --background-light: #1f2937; /* gray-800 */
+  --background-muted: #111827; /* gray-900 */
+  
+  /* Shadows */
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.3);
+  --shadow: 0 1px 3px 0 rgb(0 0 0 / 0.4), 0 1px 2px -1px rgb(0 0 0 / 0.4);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.4), 0 2px 4px -2px rgb(0 0 0 / 0.4);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.4), 0 4px 6px -4px rgb(0 0 0 / 0.4);
+}
+
+/* Utility classes */
+.bg-primary {
+  background-color: var(--primary);
+}
+
+.bg-primary-hover {
+  background-color: var(--primary-hover);
+}
+
+.bg-primary-light {
+  background-color: var(--primary-light);
+}
+
+.text-primary {
+  color: var(--primary);
+}
+
+.text-primary-hover {
+  color: var(--primary-hover);
+}
+
+.border-primary {
+  border-color: var(--primary);
+}
+
+/* Banner backgrounds */
+.banner-bg {
+  background-image: url('/banner.png');
+  background-size: cover;
+  background-position: center;
+  transition: background-image 0.3s ease-in-out;
+}
+
+.dark .banner-bg {
+  background-image: url('/banner_dark.png');
+}
+
+/* Transitions */
+.transition-theme {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, background-image 0.3s ease;
 }
 
 html {
